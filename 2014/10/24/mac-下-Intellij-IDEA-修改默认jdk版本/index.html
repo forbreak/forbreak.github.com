@@ -4,28 +4,17 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>javascript Array 指定位置插入和删除# | forbreak</title>
+    <title>mac 下 Intellij IDEA 修改默认jdk版本 | forbreak</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="liunan">
     
-    <meta name="description" content="javascript Array 指定位置插入和删除
-splice()方法／从数组中添加／删除元素，然后返回被删除元素。
-&amp;gt;注释： 该方法会改变原始数组
-语法
-1arrayObject.splice(index,howmany,item1,...,itemx);
+    <meta name="description" content="mac 下 Intellij IDEA 修改默认jdk版本
+打开terminal.app终端，输入
+1vi Applications/IntelliJ\ IDEA\ 13.app/Contents/Info.plist
 
-
-
-
-
-参数
-描述
-
-
-
-
-">
+搜索JVMVersion 
+12&amp;lt;key&amp;gt;JVMVersion&amp;l">
     
     
     
@@ -75,15 +64,15 @@ splice()方法／从数组中添加／删除元素，然后返回被删除元素
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/10/17/code/" title="javascript Array 指定位置插入和删除#" itemprop="url">javascript Array 指定位置插入和删除#</a>
+      <a href="/2014/10/24/mac-下-Intellij-IDEA-修改默认jdk版本/" title="mac 下 Intellij IDEA 修改默认jdk版本" itemprop="url">mac 下 Intellij IDEA 修改默认jdk版本</a>
   </h1>
   <p class="article-author">By
     
       <a href="forbreak.github.com" title="liunan">liunan</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-10-17T10:13:11.000Z" itemprop="datePublished">10月 17 2014</time>
-    更新日期:<time datetime="2014-10-21T10:04:46.000Z" itemprop="dateModified">10月 21 2014</time>
+    <time datetime="2014-10-24T04:02:58.000Z" itemprop="datePublished">10月 24 2014</time>
+    更新日期:<time datetime="2014-10-24T04:08:15.000Z" itemprop="dateModified">10月 24 2014</time>
     
   </p>
 </header>
@@ -92,66 +81,24 @@ splice()方法／从数组中添加／删除元素，然后返回被删除元素
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#javascript_Array_指定位置插入和删除"><span class="toc-number">1.</span> <span class="toc-text">javascript Array 指定位置插入和删除</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#>注释：_该方法会改变原始数组"><span class="toc-number">1.1.</span> <span class="toc-text">>注释： 该方法会改变原始数组</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#mac_下_Intellij_IDEA_修改默认jdk版本"><span class="toc-number">1.</span> <span class="toc-text">mac 下 Intellij IDEA 修改默认jdk版本</span></a></li></ol>
 		</div>
 		
-		<h1 id="javascript_Array_指定位置插入和删除">javascript Array 指定位置插入和删除</h1>
-<p>splice()方法／从数组中添加／删除元素，然后返回被删除元素。</p>
-<h2 id="&gt;注释：_该方法会改变原始数组">&gt;注释： 该方法会改变原始数组</h2>
-<p><em>语法</em></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayObject.splice(index,howmany,item1,...,itemx);</div></pre></td></tr></table></figure>
+		<h2 id="mac_下_Intellij_IDEA_修改默认jdk版本">mac 下 Intellij IDEA 修改默认jdk版本</h2>
+<p>打开terminal.app终端，输入</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi Applications/IntelliJ<span class="command">\ </span>IDEA<span class="command">\ </span>13.app/Contents/Info.plist</div></pre></td></tr></table></figure>
 
-<hr>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>index</td>
-<td style="text-align:center">必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。</td>
-</tr>
-<tr>
-<td>howmany</td>
-<td style="text-align:center">必需。要删除的项目数量。如果设置为 0，则不会删除项目。</td>
-</tr>
-<tr>
-<td>item1,…,itemX</td>
-<td style="text-align:center">可选。向数组添加的新项目。</td>
-</tr>
-</tbody>
-</table>
-<p>返回值</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:right">类型</th>
-<th style="text-align:right">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">Array</td>
-<td style="text-align:right">包含被删除项目的新数组，如果有的话。</td>
-</tr>
-</tbody>
-</table>
-<p>在指定位置插入元素：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">array.splice(index,<span class="number">0</span>,添加的元素);</div></pre></td></tr></table></figure>
+<p>搜索JVMVersion </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">&lt;key&gt;</span>JVMVersion<span class="variable">&lt;/key&gt;</span></div><div class="line"><span class="variable">&lt;string&gt;</span>1.6<span class="keyword">*</span><span class="variable">&lt;/string&gt;</span></div></pre></td></tr></table></figure>
 
-<p>在指定位置删除元素：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">array.splice(index,删除元素个数);</div></pre></td></tr></table></figure>
-
+<p>将1.6<em>改成1.7</em> 保存即可。<br>重新打开 idea</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/javascript/">javascript</a>
+  <span></span> <a href="/tags/osx-mac-Intellij-IDEA/">osx mac Intellij IDEA</a>
   </div>
 
 
@@ -159,7 +106,7 @@ splice()方法／从数组中添加／删除元素，然后返回被删除元素
 
 <div class="article-share" id="share">
 
-  <div data-url="forbreak.github.com/2014/10/17/code/" data-title="javascript Array 指定位置插入和删除# | forbreak" data-tsina="undefined" class="share clearfix">
+  <div data-url="forbreak.github.com/2014/10/24/mac-下-Intellij-IDEA-修改默认jdk版本/" data-title="mac 下 Intellij IDEA 修改默认jdk版本 | forbreak" data-tsina="undefined" class="share clearfix">
   </div>
 
 </div>
@@ -168,19 +115,11 @@ splice()方法／从数组中添加／删除元素，然后返回被删除元素
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/10/24/mac-下-Intellij-IDEA-修改默认jdk版本/" title="mac 下 Intellij IDEA 修改默认jdk版本">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  mac 下 Intellij IDEA 修改默认jdk版本</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2014/10/17/hello-world/"  title="Hello World">
+<a href="/2014/10/17/code/"  title="javascript Array 指定位置插入和删除#">
  <strong>NEXT:</strong><br/> 
- <span>Hello World
+ <span>javascript Array 指定位置插入和删除#
 </span>
 </a>
 </div>
@@ -192,7 +131,7 @@ splice()方法／从数组中添加／删除元素，然后返回被删除元素
       
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#javascript_Array_指定位置插入和删除"><span class="toc-number">1.</span> <span class="toc-text">javascript Array 指定位置插入和删除</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#>注释：_该方法会改变原始数组"><span class="toc-number">1.1.</span> <span class="toc-text">>注释： 该方法会改变原始数组</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#mac_下_Intellij_IDEA_修改默认jdk版本"><span class="toc-number">1.</span> <span class="toc-text">mac 下 Intellij IDEA 修改默认jdk版本</span></a></li></ol>
   </div>
 
 <div id="asidepart">
