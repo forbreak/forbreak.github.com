@@ -4,16 +4,18 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>EL 表达式 详解 | forbreak</title>
+    <title>hibernate 属性映射 首字母大小写问题 | forbreak</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="liunan">
     
-    <meta name="description" content="EL 表达式 详解
-.与［］运算符
-当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如${user.My-Name }
-上述是不正确的方式，应当改为：${user[&amp;quot;My-Name&amp;quot;] }
-想做到动态取值 就需要用到 ［］ 如$">
+    <meta name="description" content="hibernate 属性映射 首字母大小写问题
+
+在用hibernate 做orm时，javaBean 里面有个属性叫qState如果写get和set属性的是
+12getQState() setQState()
+
+但是如果这样配置的话hibernate 就会启动报错，告诉找不到get方法。
+因为hi">
     
     
     
@@ -63,15 +65,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/10/27/EL-表达式-详解/" title="EL 表达式 详解" itemprop="url">EL 表达式 详解</a>
+      <a href="/2014/10/27/hibernate-属性映射-首字母大小写问题/" title="hibernate 属性映射 首字母大小写问题" itemprop="url">hibernate 属性映射 首字母大小写问题</a>
   </h1>
   <p class="article-author">By
     
       <a href="forbreak.github.com" title="liunan">liunan</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-10-27T04:42:59.000Z" itemprop="datePublished">10月 27 2014</time>
-    更新日期:<time datetime="2014-10-27T05:49:41.000Z" itemprop="dateModified">10月 27 2014</time>
+    <time datetime="2014-10-27T07:25:47.000Z" itemprop="datePublished">10月 27 2014</time>
+    更新日期:<time datetime="2014-10-27T07:43:21.000Z" itemprop="dateModified">10月 27 2014</time>
     
   </p>
 </header>
@@ -80,21 +82,25 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EL_表达式_详解"><span class="toc-number">1.</span> <span class="toc-text">EL 表达式 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-与［］运算符"><span class="toc-number">1.0.1.</span> <span class="toc-text">.与［］运算符</span></a></li></ol></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#hibernate_属性映射_首字母大小写问题"><span class="toc-number">1.</span> <span class="toc-text">hibernate 属性映射 首字母大小写问题</span></a></li></ol>
 		</div>
 		
-		<h1 id="EL_表达式_详解">EL 表达式 详解</h1>
-<h3 id="-与［］运算符">.与［］运算符</h3>
-<p>当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如<code>${user.My-Name }</code></p>
-<p>上述是不正确的方式，应当改为：<code>${user[&quot;My-Name&quot;] }</code></p>
-<p>想做到动态取值 就需要用到 ［］ 如<code>${sessionScope.user[data]}</code></p>
+		<h1 id="hibernate_属性映射_首字母大小写问题">hibernate 属性映射 首字母大小写问题</h1>
+<hr>
+<p>在用hibernate 做orm时，javaBean 里面有个属性叫qState如果写get和set属性的是</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">getQState</span><span class="params">()</span> </span></div><div class="line"><span class="title">setQState</span><span class="params">()</span></div></pre></td></tr></table></figure>
+
+<p>但是如果这样配置的话hibernate 就会启动报错，告诉找不到get方法。</p>
+<p>因为hibernate 在碰到第一个字母小写 第二个字母大写的情况下，找的get方法的时候是不会首字母大写，是这样的<code>getqState</code>  set 方法是 <code>setqState</code> </p>
+<p>解决办法 如果有这种情况的属性 直接首字母和第二个字母都大写。<br>如：<code>QState</code></p>
+<p>注：好像javaBean规范 就是这样的 如果第一个字母小写，第二个字母大写这种情况的get和set方法是属性名首字母不变。 待我有空查下规范。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/EL-JSTL-JSP-JAVA/">EL JSTL JSP JAVA</a>
+  <span></span> <a href="/tags/hibernate-jvaBean/">hibernate jvaBean</a>
   </div>
 
 
@@ -102,7 +108,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="forbreak.github.com/2014/10/27/EL-表达式-详解/" data-title="EL 表达式 详解 | forbreak" data-tsina="undefined" class="share clearfix">
+  <div data-url="forbreak.github.com/2014/10/27/hibernate-属性映射-首字母大小写问题/" data-title="hibernate 属性映射 首字母大小写问题 | forbreak" data-tsina="undefined" class="share clearfix">
   </div>
 
 </div>
@@ -111,19 +117,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/10/27/hibernate-属性映射-首字母大小写问题/" title="hibernate 属性映射 首字母大小写问题">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  hibernate 属性映射 首字母大小写问题</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2014/10/24/mac-下-Intellij-IDEA-修改默认jdk版本/"  title="mac 下 Intellij IDEA 修改默认jdk版本">
+<a href="/2014/10/27/EL-表达式-详解/"  title="EL 表达式 详解">
  <strong>NEXT:</strong><br/> 
- <span>mac 下 Intellij IDEA 修改默认jdk版本
+ <span>EL 表达式 详解
 </span>
 </a>
 </div>
@@ -135,7 +133,7 @@
       
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EL_表达式_详解"><span class="toc-number">1.</span> <span class="toc-text">EL 表达式 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-与［］运算符"><span class="toc-number">1.0.1.</span> <span class="toc-text">.与［］运算符</span></a></li></ol></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#hibernate_属性映射_首字母大小写问题"><span class="toc-number">1.</span> <span class="toc-text">hibernate 属性映射 首字母大小写问题</span></a></li></ol>
   </div>
 
 <div id="asidepart">
