@@ -71,7 +71,7 @@
     </p>
   <p class="article-time">
     <time datetime="2014-10-27T04:42:59.000Z" itemprop="datePublished">10月 27 2014</time>
-    更新日期:<time datetime="2014-10-27T05:49:41.000Z" itemprop="dateModified">10月 27 2014</time>
+    更新日期:<time datetime="2014-10-27T08:11:02.000Z" itemprop="dateModified">10月 27 2014</time>
     
   </p>
 </header>
@@ -80,7 +80,7 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EL_表达式_详解"><span class="toc-number">1.</span> <span class="toc-text">EL 表达式 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-与［］运算符"><span class="toc-number">1.0.1.</span> <span class="toc-text">.与［］运算符</span></a></li></ol></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EL_表达式_详解"><span class="toc-number">1.</span> <span class="toc-text">EL 表达式 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-与［］运算符"><span class="toc-number">1.0.1.</span> <span class="toc-text">.与［］运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EL_变量"><span class="toc-number">1.0.2.</span> <span class="toc-text">EL 变量</span></a></li></ol></li></ol></li></ol>
 		</div>
 		
 		<h1 id="EL_表达式_详解">EL 表达式 详解</h1>
@@ -88,6 +88,13 @@
 <p>当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如<code>${user.My-Name }</code></p>
 <p>上述是不正确的方式，应当改为：<code>${user[&quot;My-Name&quot;] }</code></p>
 <p>想做到动态取值 就需要用到 ［］ 如<code>${sessionScope.user[data]}</code></p>
+<hr>
+<h3 id="EL_变量">EL 变量</h3>
+<p>el的属性取值范围为<br>|属性范围（jstl名称）| EL中名称|<br>|——————————|————-|<br>|Page|    PageScope|<br>|Request| ReuqestScope|<br>|Session| SessionScope|<br>|Application| ApplicationScope|</p>
+<p>未指定 取值范围默认的取值顺序<br>Page-&gt;Request-&gt;Session-&gt;Application    </p>
+<p>指定取值写法</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">${PageScope.username}</span></div></pre></td></tr></table></figure>
+
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -135,7 +142,7 @@
       
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EL_表达式_详解"><span class="toc-number">1.</span> <span class="toc-text">EL 表达式 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-与［］运算符"><span class="toc-number">1.0.1.</span> <span class="toc-text">.与［］运算符</span></a></li></ol></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EL_表达式_详解"><span class="toc-number">1.</span> <span class="toc-text">EL 表达式 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-与［］运算符"><span class="toc-number">1.0.1.</span> <span class="toc-text">.与［］运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EL_变量"><span class="toc-number">1.0.2.</span> <span class="toc-text">EL 变量</span></a></li></ol></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
