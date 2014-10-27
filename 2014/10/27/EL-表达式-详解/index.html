@@ -71,7 +71,7 @@
     </p>
   <p class="article-time">
     <time datetime="2014-10-27T04:42:59.000Z" itemprop="datePublished">10月 27 2014</time>
-    更新日期:<time datetime="2014-10-27T14:47:50.000Z" itemprop="dateModified">10月 27 2014</time>
+    更新日期:<time datetime="2014-10-27T14:52:33.000Z" itemprop="dateModified">10月 27 2014</time>
     
   </p>
 </header>
@@ -143,12 +143,14 @@
 <h5 id="cookie">cookie</h5>
 <p>cookie 就是浏览器缓存的值，取值方式 跟其他一样。</p>
 <h4 id="header_和_headerValues">header 和 headerValues</h4>
-<pre><code>header 储存用户浏览器和服务端用来沟通的数据，当用户要求服务端的网页时，会送出一个记载要求信息的标头文件，例如：用户浏览器的版本、用户计算机所设定的区域等其他相关数据。假若要取得用户浏览器的版本，即<span class="escape">`$</span>{header[<span class="string">"User-Agent"</span>]}<span class="escape">`。</span>
-</code></pre><h4 id="initParam">initParam</h4>
+<p>   header 储存用户浏览器和服务端用来沟通的数据，当用户要求服务端的网页时，会送出一个记载要求信息的标头文件，例如：用户浏览器的版本、用户计算机所设定的区域等其他相关数据。假若要取得用户浏览器的版本，即<code>${header[&quot;User-Agent&quot;]}</code>。</p>
+<h4 id="initParam">initParam</h4>
 <p>initParam 就是取 在web.xml 里面定义的一些值。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="pi">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="title">web-app</span> <span class="attribute">xmlns</span>=<span class="value">"http://java.sun.com/xml/ns/j2ee"</span></span></div><div class="line"></div><div class="line"><span class="attribute">xmlns:xsi</span>=<span class="value">"http://www.w3.org/2001/XMLSchema-instance"</span></div><div class="line"></div><div class="line"><span class="attribute">xsi:schemaLocation</span>=<span class="value">"http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"</span></div><div class="line"></div><div class="line"><span class="attribute">version</span>=<span class="value">"2.4"</span>&gt;：</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="title">context-param</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="title">param-name</span>&gt;</span>userid<span class="tag">&lt;/<span class="title">param-name</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="title">param-value</span>&gt;</span>mike<span class="tag">&lt;/<span class="title">param-value</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="title">context-param</span>&gt;</span>：</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="title">web-app</span>&gt;</span></div></pre></td></tr></table></figure>
 
-<p>如 取userid 就这样 <code>${initParam.userid}</code></p>
+<ul>
+<li>如 取userid 就这样 <code>${initParam.userid}</code>*</li>
+</ul>
 <h4 id="param_和_paramValues">param 和 paramValues</h4>
 <p>取得用户传的参数，如url里面的参数<br>如同 </p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">request</span>.getParameter(<span class="built_in">String</span> name)</div><div class="line"><span class="built_in">request</span>.getParameterValues(<span class="built_in">String</span> name)</div></pre></td></tr></table></figure>
@@ -180,22 +182,16 @@
 </ul>
 <hr>
 <h3 id="EL_算数运算符">EL 算数运算符</h3>
-<p>el 算数运算符和 java 一样<br> <em>注：表达式把所有数值都当成浮点数来计算的</em></p>
+<p>el 算数运算符和 java 一样<br><em>注：表达式把所有数值都当成浮点数来计算的</em></p>
 <hr>
 <h3 id="EL_关系运算符">EL 关系运算符</h3>
 <ul>
 <li>==  eq</li>
 <li>!= ne</li>
 <li>&lt; lt</li>
-<li><blockquote>
-<p>gt</p>
-</blockquote>
-</li>
+<li>/&gt; gt</li>
 <li>&lt;= le</li>
-<li><blockquote>
-<p>= ge<br><em>注：可以比较数字和字符串 字符串比较是根据 unicode 值来比较大小的</em></p>
-</blockquote>
-</li>
+<li>/&gt;= ge<br><em>注：可以比较数字和字符串 字符串比较是根据 unicode 值来比较大小的</em></li>
 </ul>
 <hr>
 <h3 id="EL_逻辑运算符">EL 逻辑运算符</h3>
@@ -211,35 +207,6 @@
 <h3 id="条件运算">条件运算</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">${isTrueOrFalse?<span class="literal">true</span>:<span class="literal">false</span>}</div></pre></td></tr></table></figure>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p>,header,headerValues,initParam 取这些里面的值需加上前缀。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
