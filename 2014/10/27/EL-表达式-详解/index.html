@@ -4,12 +4,20 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | forbreak</title>
+    <title>EL 表达式 详解 | forbreak</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="liunan">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+    <meta name="description" content="EL 表达式 详解
+.与［］运算符
+当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如
+}```12上述是不正确的方式，应当改为：
+
+${user[“My-Name”] }
+12想做到动态取值 就需要用到 ［］ 如
+
+${sessionScope.">
     
     
     
@@ -59,15 +67,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/10/17/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2014/10/27/EL-表达式-详解/" title="EL 表达式 详解" itemprop="url">EL 表达式 详解</a>
   </h1>
   <p class="article-author">By
     
       <a href="forbreak.github.com" title="liunan">liunan</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-10-17T10:06:07.000Z" itemprop="datePublished">10月 17 2014</time>
-    更新日期:<time datetime="2014-10-17T10:06:07.000Z" itemprop="dateModified">10月 17 2014</time>
+    <time datetime="2014-10-27T04:42:59.000Z" itemprop="datePublished">10月 27 2014</time>
+    更新日期:<time datetime="2014-10-27T04:48:33.000Z" itemprop="dateModified">10月 27 2014</time>
     
   </p>
 </header>
@@ -76,37 +84,33 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EL_表达式_详解"><span class="toc-number">1.</span> <span class="toc-text">EL 表达式 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-与［］运算符"><span class="toc-number">1.0.1.</span> <span class="toc-text">.与［］运算符</span></a></li></ol></li></ol></li></ol>
 		</div>
 		
-		<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+		<h1 id="EL_表达式_详解">EL 表达式 详解</h1>
+<h3 id="-与［］运算符">.与［］运算符</h3>
+<p>当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如</p>
+<figure class="highlight ${user.My-Name"><figcaption><span>}```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">上述是不正确的方式，应当改为：</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>${user[“My-Name”] }</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">想做到动态取值 就需要用到 ［］ 如</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<p>${sessionScope.user[data]}<br>```</p>
   
 	</div>
 		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/EL-JSTL-JSP-JAVA/">EL JSTL JSP JAVA</a>
+  </div>
 
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="forbreak.github.com/2014/10/17/hello-world/" data-title="Hello World | forbreak" data-tsina="undefined" class="share clearfix">
+  <div data-url="forbreak.github.com/2014/10/27/EL-表达式-详解/" data-title="EL 表达式 详解 | forbreak" data-tsina="undefined" class="share clearfix">
   </div>
 
 </div>
@@ -115,14 +119,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/10/17/code/" title="javascript Array 指定位置插入和删除#">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  javascript Array 指定位置插入和删除#</span>
+
+<div class="next">
+<a href="/2014/10/24/mac-下-Intellij-IDEA-修改默认jdk版本/"  title="mac 下 Intellij IDEA 修改默认jdk版本">
+ <strong>NEXT:</strong><br/> 
+ <span>mac 下 Intellij IDEA 修改默认jdk版本
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -131,7 +135,7 @@
       
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EL_表达式_详解"><span class="toc-number">1.</span> <span class="toc-text">EL 表达式 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-与［］运算符"><span class="toc-number">1.0.1.</span> <span class="toc-text">.与［］运算符</span></a></li></ol></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
