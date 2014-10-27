@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>forbreak</title>
+    <title>EL 表达式 详解 | forbreak</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="liunan">
     
-    <meta name="description" content="title: EL 表达式 详解date: 2014-10-27 12:42:59categories: javaWeb
-tags: [EL, JAVA ]
-EL 表达式 详解
+    <meta name="description" content="EL 表达式 详解
 .与［］运算符
-当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如${">
+当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如${user.My-Name }
+上述是不正确的方式，应当改为：${user[&amp;quot;My-Name&amp;quot;] }
+想做到动态取值 就需要用到 ［］ 如$">
     
     
     
@@ -63,15 +63,15 @@ EL 表达式 详解
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/10/27/EL-表达式-详解/" title="" itemprop="url"></a>
+      <a href="/2014/10/27/EL-表达式-详解/" title="EL 表达式 详解" itemprop="url">EL 表达式 详解</a>
   </h1>
   <p class="article-author">By
     
       <a href="forbreak.github.com" title="liunan">liunan</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-10-27T14:04:14.000Z" itemprop="datePublished">10月 27 2014</time>
-    更新日期:<time datetime="2014-10-27T14:04:14.000Z" itemprop="dateModified">10月 27 2014</time>
+    <time datetime="2014-10-27T04:42:59.000Z" itemprop="datePublished">10月 27 2014</time>
+    更新日期:<time datetime="2014-10-27T14:07:13.000Z" itemprop="dateModified">10月 27 2014</time>
     
   </p>
 </header>
@@ -80,12 +80,10 @@ EL 表达式 详解
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tags:_[EL,_JAVA_]"><span class="toc-number">1.</span> <span class="toc-text">tags: [EL, JAVA ]</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#EL_表达式_详解"><span class="toc-number"></span> <span class="toc-text">EL 表达式 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-与［］运算符"><span class="toc-number">0.1.</span> <span class="toc-text">.与［］运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EL_变量"><span class="toc-number">0.2.</span> <span class="toc-text">EL 变量</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EL_表达式_详解"><span class="toc-number">1.</span> <span class="toc-text">EL 表达式 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-与［］运算符"><span class="toc-number">1.0.1.</span> <span class="toc-text">.与［］运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EL_变量"><span class="toc-number">1.0.2.</span> <span class="toc-text">EL 变量</span></a></li></ol></li></ol></li></ol>
 		</div>
 		
-		<p>title: EL 表达式 详解<br>date: 2014-10-27 12:42:59<br>categories: javaWeb</p>
-<h2 id="tags:_[EL,_JAVA_]">tags: [EL, JAVA ]</h2>
-<h1 id="EL_表达式_详解">EL 表达式 详解</h1>
+		<h1 id="EL_表达式_详解">EL 表达式 详解</h1>
 <h3 id="-与［］运算符">.与［］运算符</h3>
 <p>当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如<code>${user.My-Name }</code></p>
 <p>上述是不正确的方式，应当改为：<code>${user[&quot;My-Name&quot;] }</code></p>
@@ -127,12 +125,22 @@ EL 表达式 详解
 	</div>
 		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/EL/">EL</a><a href="/tags/JAVA/">JAVA</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/javaWeb/">javaWeb</a>
+</div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="forbreak.github.com/2014/10/27/EL-表达式-详解/" data-title="forbreak" data-tsina="undefined" class="share clearfix">
+  <div data-url="forbreak.github.com/2014/10/27/EL-表达式-详解/" data-title="EL 表达式 详解 | forbreak" data-tsina="undefined" class="share clearfix">
   </div>
 
 </div>
@@ -141,11 +149,19 @@ EL 表达式 详解
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2014/10/27/hibernate-属性映射-首字母大小写问题/" title="hibernate 属性映射 首字母大小写问题">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  hibernate 属性映射 首字母大小写问题</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/2014/10/27/hibernate-属性映射-首字母大小写问题/"  title="hibernate 属性映射 首字母大小写问题">
+<a href="/2014/10/24/mac-下-Intellij-IDEA-修改默认jdk版本/"  title="mac 下 Intellij IDEA 修改默认jdk版本">
  <strong>NEXT:</strong><br/> 
- <span>hibernate 属性映射 首字母大小写问题
+ <span>mac 下 Intellij IDEA 修改默认jdk版本
 </span>
 </a>
 </div>
@@ -157,7 +173,7 @@ EL 表达式 详解
       
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tags:_[EL,_JAVA_]"><span class="toc-number">1.</span> <span class="toc-text">tags: [EL, JAVA ]</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#EL_表达式_详解"><span class="toc-number"></span> <span class="toc-text">EL 表达式 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-与［］运算符"><span class="toc-number">0.1.</span> <span class="toc-text">.与［］运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EL_变量"><span class="toc-number">0.2.</span> <span class="toc-text">EL 变量</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EL_表达式_详解"><span class="toc-number">1.</span> <span class="toc-text">EL 表达式 详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-与［］运算符"><span class="toc-number">1.0.1.</span> <span class="toc-text">.与［］运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EL_变量"><span class="toc-number">1.0.2.</span> <span class="toc-text">EL 变量</span></a></li></ol></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
@@ -192,6 +208,8 @@ EL 表达式 详解
 		
 			<li><a href="/categories/hibernate/" title="hibernate">hibernate<sup>1</sup></a></li>
 		
+			<li><a href="/categories/javaWeb/" title="javaWeb">javaWeb<sup>1</sup></a></li>
+		
 			<li><a href="/categories/js/" title="js">js<sup>1</sup></a></li>
 		
 		</ul>
@@ -210,7 +228,11 @@ EL 表达式 详解
 	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
 		
+			<li><a href="/tags/EL/" title="EL">EL<sup>1</sup></a></li>
+		
 			<li><a href="/tags/EL-JSTL-JSP-JAVA/" title="EL JSTL JSP JAVA">EL JSTL JSP JAVA<sup>0</sup></a></li>
+		
+			<li><a href="/tags/JAVA/" title="JAVA">JAVA<sup>1</sup></a></li>
 		
 			<li><a href="/tags/hibernate/" title="hibernate">hibernate<sup>1</sup></a></li>
 		
