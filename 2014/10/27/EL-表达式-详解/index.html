@@ -12,12 +12,13 @@
     <meta name="description" content="EL 表达式 详解
 .与［］运算符
 当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如
-}```12上述是不正确的方式，应当改为：
+1${user.My-Name }
 
-${user[“My-Name”] }
-12想做到动态取值 就需要用到 ［］ 如
+上述是不正确的方式，应当改为：
+1${user[&quot;My-Name&quot;] }
 
-${sessionScope.">
+想做到动态取值 就需要用到 ［］ 如
+1${s">
     
     
     
@@ -75,7 +76,7 @@ ${sessionScope.">
     </p>
   <p class="article-time">
     <time datetime="2014-10-27T04:42:59.000Z" itemprop="datePublished">10月 27 2014</time>
-    更新日期:<time datetime="2014-10-27T04:48:33.000Z" itemprop="dateModified">10月 27 2014</time>
+    更新日期:<time datetime="2014-10-27T04:50:08.000Z" itemprop="dateModified">10月 27 2014</time>
     
   </p>
 </header>
@@ -90,12 +91,15 @@ ${sessionScope.">
 		<h1 id="EL_表达式_详解">EL 表达式 详解</h1>
 <h3 id="-与［］运算符">.与［］运算符</h3>
 <p>当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如</p>
-<figure class="highlight ${user.My-Name"><figcaption><span>}```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">上述是不正确的方式，应当改为：</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">${<span class="literal">user</span>.My-<span class="keyword">Name</span> }</div></pre></td></tr></table></figure>
 
-<p>${user[“My-Name”] }</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">想做到动态取值 就需要用到 ［］ 如</div></pre></td></tr></table></figure>
+<p>上述是不正确的方式，应当改为：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">${<span class="literal">user</span>[<span class="string">"My-Name"</span>] }</div></pre></td></tr></table></figure>
 
-<p>${sessionScope.user[data]}<br>```</p>
+<p>想做到动态取值 就需要用到 ［］ 如</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">${sessionScope.user[<span class="typedef"><span class="keyword">data</span>]}</span></div></pre></td></tr></table></figure>
+
+
   
 	</div>
 		<footer class="article-footer clearfix">
