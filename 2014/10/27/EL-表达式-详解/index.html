@@ -11,14 +11,9 @@
     
     <meta name="description" content="EL 表达式 详解
 .与［］运算符
-当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如
-1${user.My-Name }
-
-上述是不正确的方式，应当改为：
-1${user[&quot;My-Name&quot;] }
-
-想做到动态取值 就需要用到 ［］ 如
-1${s">
+当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如${user.My-Name }
+上述是不正确的方式，应当改为：${user[&amp;quot;My-Name&amp;quot;] }
+想做到动态取值 就需要用到 ［］ 如$">
     
     
     
@@ -76,7 +71,7 @@
     </p>
   <p class="article-time">
     <time datetime="2014-10-27T04:42:59.000Z" itemprop="datePublished">10月 27 2014</time>
-    更新日期:<time datetime="2014-10-27T04:50:08.000Z" itemprop="dateModified">10月 27 2014</time>
+    更新日期:<time datetime="2014-10-27T05:49:41.000Z" itemprop="dateModified">10月 27 2014</time>
     
   </p>
 </header>
@@ -90,16 +85,9 @@
 		
 		<h1 id="EL_表达式_详解">EL 表达式 详解</h1>
 <h3 id="-与［］运算符">.与［］运算符</h3>
-<p>当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">${<span class="literal">user</span>.My-<span class="keyword">Name</span> }</div></pre></td></tr></table></figure>
-
-<p>上述是不正确的方式，应当改为：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">${<span class="literal">user</span>[<span class="string">"My-Name"</span>] }</div></pre></td></tr></table></figure>
-
-<p>想做到动态取值 就需要用到 ［］ 如</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">${sessionScope.user[<span class="typedef"><span class="keyword">data</span>]}</span></div></pre></td></tr></table></figure>
-
-
+<p>当要存取的属性名称中包含一些特殊字符，如. 或 – 等并非字母或数字的符号，就一定要使用 [ ]，例如<code>${user.My-Name }</code></p>
+<p>上述是不正确的方式，应当改为：<code>${user[&quot;My-Name&quot;] }</code></p>
+<p>想做到动态取值 就需要用到 ［］ 如<code>${sessionScope.user[data]}</code></p>
   
 	</div>
 		<footer class="article-footer clearfix">
